@@ -7,7 +7,7 @@
 <meta name="description" content="Minus (−minus) è un launcher minimale per Android, gratis e open source: la tua giornata al posto delle icone, meno notifiche, meno doomscrolling e meno telefono la sera. Niente account né server.">
 <link rel="canonical" href="https://minus-phone.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#F3F1EB">
+<meta name="theme-color" content="#EEE7DA">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="−minus">
@@ -149,7 +149,7 @@
 @font-face{font-family:Literata;font-style:italic;font-weight:500;font-display:swap;src:url(fonts/literata-latin-500-italic.woff2) format("woff2")}
 @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2")}
-body{margin:0}
+body{margin:0;background-color:#F0E7D6}
 
 :root,.op{--carta:#F3F1EB;--inchiostro:#171716;--matita:#5C5A55;--filo:#D8D5CC;--serif:Literata,Georgia,serif;--sans:"Atkinson Hyperlegible",system-ui,sans-serif}
 *{box-sizing:border-box}
@@ -287,7 +287,7 @@ p{margin:0 0 14px}
 .ob .riga{font-family:var(--serif);font-size:22px;line-height:1.3;margin:0}
 .ob .cosa{color:var(--matita);font-size:17px;margin:0 0 24px}
 /* Lo studio come callout: box un po' più scuro, testi più piccoli */
-.ob .studio{background:#E9E6DD;border-radius:14px;padding:16px 20px 18px}
+.ob .studio{background:#E1DAC7;border-radius:14px;padding:16px 20px 18px}
 .ob .studio .etichetta{font-size:12px;margin-bottom:6px}
 .ob .studio p{margin:0 0 8px;font-size:15px;line-height:1.45}
 .ob .studio cite{display:block;font-size:13px;line-height:1.35}
@@ -335,7 +335,8 @@ footer a{color:var(--inchiostro)}
 
 
 /* Solo sito: pagina fluida, sul telefono hero senza bottoni (c'è la barra) e sezioni più strette */
-body{background:var(--carta)}
+body{background:#F0E7D6}
+.op{background:#E9E7E158}
 .op{min-height:100vh}
 @media (max-width:640px){.apertura .azioni{display:none}.solo-ampio{display:none}.sezione{padding:28px 0 24px}}
 </style>
@@ -413,11 +414,6 @@ body{background:var(--carta)}
         <div class="f12 mu up" style="padding-top:.8em">Task</div>
         <div class="tk"><span class="cb"></span><span class="f16 el"><b class="urg">!</b>Pagare la retta del nido</span></div>
         <div class="tk"><span class="cb"></span><span class="f16 el">Comprare il latte</span></div>
-        <div class="ln corta"></div>
-        <div class="f12 mu b" style="padding-top:.7em">entro gio</div>
-        <div class="tk"><span class="cb"></span><span class="f16 el"><b class="urg">!</b>Prenotare il tagliando</span></div>
-        <div class="f12 mu" style="padding-top:.7em">senza scadenza</div>
-        <div class="tk"><span class="cb"></span><span class="f16 el">Regalo per Sara</span></div>
         <div class="ln"></div>
         <div class="dm"><span class="f12 mu up">Domani · mar 17</span><span class="f15 b">Sveglia 6:50</span></div>
         <div class="rw"><span class="f15 ser mu">08:30</span><span class="f16 ser el">Palestra</span></div>
@@ -436,7 +432,7 @@ body{background:var(--carta)}
 
   <ul class="obiettivi">
     <li class="ob">
-      <div class="testa"><h3>Meno notifiche</h3><p class="riga">Ti interrompe solo ciò che conta.</p></div>
+      <div class="testa"><h3>Meno notifiche</h3><p class="riga">Più attenzione alle cose importanti</p></div>
       <div class="scr">
       <div class="ph" role="img" aria-label="Le notifiche di −minus: in Per te cinque messaggi di persone e gruppi scelti, ognuno da segnare come visto; il resto aspetta in Altro">
         <div class="f16" style="min-height:2.75em;display:flex;align-items:center">‹&#160;&#160;Home</div>
@@ -462,7 +458,7 @@ body{background:var(--carta)}
       </div>
     </li>
     <li class="ob">
-      <div class="testa"><h3>Meno doomscrolling</h3><p class="riga">Le app che ti trattengono ti chiedono prima per cosa le apri.</p></div>
+      <div class="testa"><h3>Meno doomscrolling</h3><p class="riga">Più intenzione in ciò che decidi di fare</p></div>
       <div class="scr">
       <div class="ph sc" role="img" aria-label="La pausa prima di Instagram: un task da completare, poi la domanda per cosa ti serve con lo scopo scritto, il tempo scelto e i bottoni Non ora e Apri per 10 minuti">
         <div class="f13 mu" style="padding:.4em 0 1.1em">Stai aprendo Instagram</div>
@@ -491,7 +487,7 @@ body{background:var(--carta)}
       </div>
     </li>
     <li class="ob">
-      <div class="testa"><h3>Meno interferenze sul sonno</h3><p class="riga">La sera il telefono si fa da parte, e di notte ti raggiunge solo chi conta.</p></div>
+      <div class="testa"><h3>Meno interferenze sul sonno</h3><p class="riga">Più tranquillità prima di dormire</p></div>
       <div class="scr">
       <div class="ph sc" role="img" aria-label="La home di sera: il consiglio della settimana, un task urgente, domani con la sveglia e i primi impegni, il bottone Aggiungi e il campo Cerca o chiedi">
         <div class="top">
@@ -544,9 +540,7 @@ body{background:var(--carta)}
 </section>
 
 <section class="sezione forte" aria-labelledby="fonti">
-  <p class="etichetta">Bibliografia</p>
-  <h2 id="fonti">Gli studi dietro <em class="m-">−minus</em></h2>
-  <p class="intro">Ogni scelta di <em class="m-">−minus</em> parte dalla ricerca. Sono 36 studi, divisi per tema: ogni link apre la rivista che li ha pubblicati.</p>
+  <p class="etichetta" id="fonti">Bibliografia</p>
   <div class="fonti" id="elenco-fonti">
     <div class="gruppo">
       <h3>Come usiamo il telefono <span>6</span></h3>
