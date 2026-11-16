@@ -301,12 +301,22 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";float:right;color:var(--matita)}
 details[open] summary::after{content:"−"}
 details p{margin:10px 0 0;color:var(--matita)}
-.fonti{list-style:none;padding:0;margin:0;font-size:14px;color:var(--matita);columns:2;column-gap:32px}
-.fonti li{padding:4px 0;break-inside:avoid}
-@media (max-width:640px){.fonti{columns:1}}
-/* Da mobile: i primi tre studi + Vedi tutti */
-.vedi{display:none;margin-top:18px;min-height:44px;padding:0 20px;border-radius:22px;border:1.5px solid var(--inchiostro);background:transparent;color:var(--inchiostro);font:700 15px var(--sans);cursor:pointer}
-@media (max-width:640px){.fonti:not(.aperta) li:nth-child(n+4){display:none}.vedi{display:inline-flex;align-items:center}}
+/* Bibliografia: gli studi divisi per tema, su due colonne */
+.fonti{margin-top:44px;columns:2;column-gap:56px}
+.gruppo{break-inside:avoid;margin:0 0 40px}
+.gruppo h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:21px;padding-bottom:10px;margin:0;border-bottom:1px solid var(--inchiostro)}
+.gruppo h3 span{font-family:var(--sans);font-size:13px;color:var(--matita)}
+.gruppo ul{list-style:none;padding:0;margin:0}
+.gruppo li{border-bottom:1px solid var(--filo)}
+.gruppo a{display:flex;flex-direction:column;gap:2px;padding:11px 0;text-decoration:none;line-height:1.35}
+.gruppo .aut{font-size:16px}
+.gruppo .aut::after{content:" ↗";color:var(--matita);font-size:13px}
+.gruppo .riv{font-size:14px;color:var(--matita)}
+.gruppo a:hover{opacity:1}.gruppo a:hover .aut{text-decoration:underline}
+@media (max-width:640px){.fonti{columns:1;margin-top:28px}.gruppo{margin-bottom:28px}}
+/* Da mobile: il primo tema + Vedi tutti */
+.vedi{display:none;margin-top:4px;min-height:44px;padding:0 20px;border-radius:22px;border:1.5px solid var(--inchiostro);background:transparent;color:var(--inchiostro);font:700 15px var(--sans);cursor:pointer}
+@media (max-width:640px){.fonti:not(.aperta) .gruppo:nth-child(n+2){display:none}.vedi{display:inline-flex;align-items:center}}
 
 footer{padding:40px 0 64px;border-top:1px solid var(--inchiostro);font-size:15px;color:var(--matita);display:flex;flex-wrap:wrap;gap:12px 28px}
 footer a{color:var(--inchiostro)}
@@ -347,8 +357,8 @@ body{background:var(--carta)}
   <p class="payoff">Il tuo smartphone. <br class="solo-ampio">Ma <em class="m-">−minus</em>.</p>
   <p class="sotto">Cambia il modo in cui usi il telefono, senza cambiare telefono. Una home essenziale, la tua giornata al centro, le app quando servono.</p>
   <div class="azioni">
-    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases">Scarica per Android</a>
-    <a class="bottone" href="https://github.com/minus-phone/Minus/issues/new/choose">Segnala un problema o un'idea</a>
+    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases" target="_blank" rel="noopener">Scarica per Android</a>
+    <a class="bottone" href="https://github.com/minus-phone/Minus/issues/new/choose" target="_blank" rel="noopener">Segnala un problema o un'idea</a>
   </div>
   <ul class="punti">
     <li>Gratis e open source</li>
@@ -533,55 +543,82 @@ body{background:var(--carta)}
   <details><summary>Chi l'ha fatta, e come?</summary><p>Una product designer che, una volta diventata mamma, si è accorta di avere un problema con l'uso del telefono. La usa ogni giorno, e l'ha costruita lavorando con un'intelligenza artificiale in ogni fase. Ha ascoltato 72 persone, con un questionario e i dati veri del loro telefono. Ha studiato la ricerca sull'uso del telefono, per distinguere l'uso frequente da quello che fa male (<a href="#fonti">gli studi letti</a>). Ha provato wireframe, prototipi e una nuova versione ogni pochi giorni, sul proprio telefono. E ha lasciato il codice pubblico, così chiunque può verificare che <em class="m-">−minus</em> non raccoglie dati, segnalare un problema o proporre un'idea.</p></details>
 </section>
 
-<section class="sezione" aria-labelledby="fonti">
-  <p class="etichetta" id="fonti">Bibliografia · 36 studi</p>
-  <ul class="fonti" id="elenco-fonti">
-    <li><a href="https://doi.org/10.1016/j.smrv.2024.101933">Bauducco e altri, 2024 · Sleep Medicine Reviews</a></li>
-    <li><a href="https://doi.org/10.1556/2006.4.2015.009">Billieux e altri, 2015 · Journal of Behavioral Addictions</a></li>
-    <li><a href="https://doi.org/10.1037/xap0000430">Brailovskaia e altri, 2022 · Journal of Experimental Psychology: Applied</a></li>
-    <li><a href="https://doi.org/10.1016/j.neubiorev.2019.06.032">Brand e altri, 2019 · Neuroscience and Biobehavioral Reviews</a></li>
-    <li><a href="https://doi.org/10.1073/pnas.1418490112">Chang e altri, 2015 · PNAS</a></li>
-    <li><a href="https://doi.org/10.3390/bs13100839">Correa-Iriarte e altri, 2023 · Behavioral Sciences</a></li>
-    <li><a href="https://doi.org/10.1016/j.janxdis.2018.11.005">Elhai, Levine e Hall, 2019 · Journal of Anxiety Disorders</a></li>
-    <li><a href="https://doi.org/10.1016/j.ijhcs.2019.05.004">Ellis e altri, 2019 · International Journal of Human-Computer Studies</a></li>
-    <li><a href="https://www.pnas.org/doi/10.1073/pnas.2213114120">Grüning e altri, 2023 · PNAS</a></li>
-    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228756">He e altri, 2020 · PLOS ONE</a></li>
-    <li><a href="https://doi.org/10.1016/j.chb.2020.106637">Heitmayer e Lahlou, 2021 · Computers in Human Behavior</a></li>
-    <li><a href="https://doi.org/10.1016/j.sleep.2025.02.043">Hill e altri, 2025 · Sleep Medicine</a></li>
-    <li><a href="https://journals.sagepub.com/doi/10.1177/20501579231212062">Holte e altri, 2023 · Mobile Media &amp; Communication</a></li>
-    <li><a href="https://doi.org/10.1016/j.chb.2018.03.047">Hughes e Burke, 2018 · Computers in Human Behavior</a></li>
-    <li><a href="https://doi.org/10.1521/jscp.2018.37.10.751">Hunt e altri, 2018 · Journal of Social and Clinical Psychology</a></li>
-    <li><a href="https://doi.org/10.1097/PSY.0000000000000568">Hunter e Pressman, 2018 · Psychosomatic Medicine</a></li>
-    <li><a href="https://doi.org/10.1016/j.sleh.2021.03.005">Jensen e altri, 2021 · Sleep Health</a></li>
-    <li><a href="https://doi.org/10.1007/s41105-021-00345-6">Joshi, Woodward e Woltering, 2022 · Sleep and Biological Rhythms</a></li>
-    <li><a href="https://doi.org/10.1111/add.13763">Kardefelt-Winther e altri, 2017 · Addiction</a></li>
-    <li><a href="https://doi.org/10.1145/2858036.2858568">Ko e altri, 2016 · CHI</a></li>
-    <li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2014.00611/full">Kroese e altri, 2014 · Frontiers in Psychology</a></li>
-    <li><a href="https://doi.org/10.1145/2858036.2858359">Kushlev e altri, 2016 · CHI</a></li>
-    <li><a href="https://doi.org/10.1016/j.jpsychires.2015.04.003">Lin e altri, 2015 · Journal of Psychiatric Research</a></li>
-    <li><a href="https://doi.org/10.1145/3191754">Lukoff e altri, 2018 · IMWUT</a></li>
-    <li><a href="https://doi.org/10.1093/jcr/ucaa005">Melumad e Pham, 2020 · Journal of Consumer Research</a></li>
-    <li><a href="https://doi.org/10.1016/j.chb.2019.04.023">Noë e altri, 2019 · Computers in Human Behavior</a></li>
-    <li><a href="https://doi.org/10.1038/s41562-018-0506-1">Orben e Przybylski, 2019 · Nature Human Behaviour</a></li>
-    <li><a href="https://doi.org/10.1556/2006.7.2018.49">Panova e Carbonell, 2018 · Journal of Behavioral Addictions</a></li>
-    <li><a href="https://doi.org/10.1177/20501579211028647">Radtke e altri, 2022 · Mobile Media &amp; Communication</a></li>
-    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204811">Rod e altri, 2018 · PLOS ONE</a></li>
-    <li><a href="https://academic.oup.com/sleep/article/46/12/zsad256/7284100">Rod e altri, 2023 · Sleep</a></li>
-    <li><a href="https://doi.org/10.1016/j.abrep.2020.100257">Ryding e Kuss, 2020 · Addictive Behaviors Reports</a></li>
-    <li><a href="https://doi.org/10.1186/s12888-019-2350-x">Sohn e altri, 2019 · BMC Psychiatry</a></li>
-    <li><a href="https://doi.org/10.1145/3290605.3300542">Tran e altri, 2019 · CHI</a></li>
-    <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyt.2021.669042/full">Wacks e Weinstein, 2021 · Frontiers in Psychiatry</a></li>
-    <li><a href="https://doi.org/10.1016/j.chbr.2023.100294">Wickord e Quaiser-Pohl, 2023 · Computers in Human Behavior Reports</a></li>
-  </ul>
+<section class="sezione forte" aria-labelledby="fonti">
+  <p class="etichetta">Bibliografia</p>
+  <h2 id="fonti">Gli studi dietro <em class="m-">−minus</em></h2>
+  <p class="intro">Ogni scelta di <em class="m-">−minus</em> parte dalla ricerca. Sono 36 studi, divisi per tema: ogni link apre la rivista che li ha pubblicati.</p>
+  <div class="fonti" id="elenco-fonti">
+    <div class="gruppo">
+      <h3>Come usiamo il telefono <span>6</span></h3>
+      <ul>
+      <li><a href="https://doi.org/10.1016/j.ijhcs.2019.05.004" target="_blank" rel="noopener"><span class="aut">Ellis e altri, 2019</span><span class="riv">International Journal of Human-Computer Studies</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.chb.2020.106637" target="_blank" rel="noopener"><span class="aut">Heitmayer e Lahlou, 2021</span><span class="riv">Computers in Human Behavior</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.jpsychires.2015.04.003" target="_blank" rel="noopener"><span class="aut">Lin e altri, 2015</span><span class="riv">Journal of Psychiatric Research</span></a></li>
+      <li><a href="https://doi.org/10.1145/3191754" target="_blank" rel="noopener"><span class="aut">Lukoff e altri, 2018</span><span class="riv">IMWUT</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.chb.2019.04.023" target="_blank" rel="noopener"><span class="aut">Noë e altri, 2019</span><span class="riv">Computers in Human Behavior</span></a></li>
+      <li><a href="https://doi.org/10.1145/3290605.3300542" target="_blank" rel="noopener"><span class="aut">Tran e altri, 2019</span><span class="riv">CHI</span></a></li>
+      </ul>
+    </div>
+    <div class="gruppo">
+      <h3>Usarlo meno: cosa funziona <span>7</span></h3>
+      <ul>
+      <li><a href="https://doi.org/10.1037/xap0000430" target="_blank" rel="noopener"><span class="aut">Brailovskaia e altri, 2022</span><span class="riv">Journal of Experimental Psychology: Applied</span></a></li>
+      <li><a href="https://journals.sagepub.com/doi/10.1177/20501579231212062" target="_blank" rel="noopener"><span class="aut">Dekker e Baumgartner, 2024</span><span class="riv">Mobile Media &amp; Communication</span></a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.2213114120" target="_blank" rel="noopener"><span class="aut">Grüning e altri, 2023</span><span class="riv">PNAS</span></a></li>
+      <li><a href="https://doi.org/10.1145/2858036.2858568" target="_blank" rel="noopener"><span class="aut">Ko e altri, 2016</span><span class="riv">CHI</span></a></li>
+      <li><a href="https://doi.org/10.1145/2858036.2858359" target="_blank" rel="noopener"><span class="aut">Kushlev e altri, 2016</span><span class="riv">CHI</span></a></li>
+      <li><a href="https://doi.org/10.1177/20501579211028647" target="_blank" rel="noopener"><span class="aut">Radtke e altri, 2022</span><span class="riv">Mobile Media &amp; Communication</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.chbr.2023.100294" target="_blank" rel="noopener"><span class="aut">Wickord e Quaiser-Pohl, 2023</span><span class="riv">Computers in Human Behavior Reports</span></a></li>
+      </ul>
+    </div>
+    <div class="gruppo">
+      <h3>Il telefono e il sonno <span>10</span></h3>
+      <ul>
+      <li><a href="https://doi.org/10.1016/j.smrv.2024.101933" target="_blank" rel="noopener"><span class="aut">Bauducco e altri, 2024</span><span class="riv">Sleep Medicine Reviews</span></a></li>
+      <li><a href="https://doi.org/10.1073/pnas.1418490112" target="_blank" rel="noopener"><span class="aut">Chang e altri, 2015</span><span class="riv">PNAS</span></a></li>
+      <li><a href="https://doi.org/10.3390/bs13100839" target="_blank" rel="noopener"><span class="aut">Correa-Iriarte e altri, 2023</span><span class="riv">Behavioral Sciences</span></a></li>
+      <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228756" target="_blank" rel="noopener"><span class="aut">He e altri, 2020</span><span class="riv">PLOS ONE</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.sleep.2025.02.043" target="_blank" rel="noopener"><span class="aut">Hill e altri, 2025</span><span class="riv">Sleep Medicine</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.sleh.2021.03.005" target="_blank" rel="noopener"><span class="aut">Jensen e altri, 2021</span><span class="riv">Sleep Health</span></a></li>
+      <li><a href="https://doi.org/10.1007/s41105-021-00345-6" target="_blank" rel="noopener"><span class="aut">Joshi, Woodward e Woltering, 2022</span><span class="riv">Sleep and Biological Rhythms</span></a></li>
+      <li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2014.00611/full" target="_blank" rel="noopener"><span class="aut">Kroese e altri, 2014</span><span class="riv">Frontiers in Psychology</span></a></li>
+      <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204811" target="_blank" rel="noopener"><span class="aut">Rod e altri, 2018</span><span class="riv">PLOS ONE</span></a></li>
+      <li><a href="https://academic.oup.com/sleep/article/46/12/zsad256/7284100" target="_blank" rel="noopener"><span class="aut">Rod e altri, 2023</span><span class="riv">Sleep</span></a></li>
+      </ul>
+    </div>
+    <div class="gruppo">
+      <h3>Umore, ansia e relazioni <span>5</span></h3>
+      <ul>
+      <li><a href="https://doi.org/10.1016/j.janxdis.2018.11.005" target="_blank" rel="noopener"><span class="aut">Elhai, Levine e Hall, 2019</span><span class="riv">Journal of Anxiety Disorders</span></a></li>
+      <li><a href="https://doi.org/10.1521/jscp.2018.37.10.751" target="_blank" rel="noopener"><span class="aut">Hunt e altri, 2018</span><span class="riv">Journal of Social and Clinical Psychology</span></a></li>
+      <li><a href="https://doi.org/10.1097/PSY.0000000000000568" target="_blank" rel="noopener"><span class="aut">Hunter e Pressman, 2018</span><span class="riv">Psychosomatic Medicine</span></a></li>
+      <li><a href="https://doi.org/10.1093/jcr/ucaa005" target="_blank" rel="noopener"><span class="aut">Melumad e Pham, 2020</span><span class="riv">Journal of Consumer Research</span></a></li>
+      <li><a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener"><span class="aut">Orben e Przybylski, 2019</span><span class="riv">Nature Human Behaviour</span></a></li>
+      </ul>
+    </div>
+    <div class="gruppo">
+      <h3>Quando l'uso diventa un problema <span>8</span></h3>
+      <ul>
+      <li><a href="https://doi.org/10.1556/2006.4.2015.009" target="_blank" rel="noopener"><span class="aut">Billieux e altri, 2015</span><span class="riv">Journal of Behavioral Addictions</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.neubiorev.2019.06.032" target="_blank" rel="noopener"><span class="aut">Brand e altri, 2019</span><span class="riv">Neuroscience and Biobehavioral Reviews</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.chb.2018.03.047" target="_blank" rel="noopener"><span class="aut">Hughes e Burke, 2018</span><span class="riv">Computers in Human Behavior</span></a></li>
+      <li><a href="https://doi.org/10.1111/add.13763" target="_blank" rel="noopener"><span class="aut">Kardefelt-Winther e altri, 2017</span><span class="riv">Addiction</span></a></li>
+      <li><a href="https://doi.org/10.1556/2006.7.2018.49" target="_blank" rel="noopener"><span class="aut">Panova e Carbonell, 2018</span><span class="riv">Journal of Behavioral Addictions</span></a></li>
+      <li><a href="https://doi.org/10.1016/j.abrep.2020.100257" target="_blank" rel="noopener"><span class="aut">Ryding e Kuss, 2020</span><span class="riv">Addictive Behaviors Reports</span></a></li>
+      <li><a href="https://doi.org/10.1186/s12888-019-2350-x" target="_blank" rel="noopener"><span class="aut">Sohn e altri, 2019</span><span class="riv">BMC Psychiatry</span></a></li>
+      <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyt.2021.669042/full" target="_blank" rel="noopener"><span class="aut">Wacks e Weinstein, 2021</span><span class="riv">Frontiers in Psychiatry</span></a></li>
+      </ul>
+    </div>
+  </div>
   <button class="vedi" type="button" aria-controls="elenco-fonti" aria-expanded="false">Vedi tutti</button>
 </section>
 
 <footer>
   <span><em class="m-">−minus</em> · open source, GPL-3.0</span>
-  <a href="https://github.com/minus-phone/Minus">GitHub</a>
-  <a href="https://github.com/minus-phone/Minus/blob/main/PRIVACY.md">Privacy</a>
-  <a href="https://github.com/minus-phone/Minus/issues/new/choose">Segnala un problema</a>
-  <a href="https://github.com/minus-phone/Minus/discussions">Proponi un'idea</a>
+  <a href="https://github.com/minus-phone/Minus" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://github.com/minus-phone/Minus/blob/main/PRIVACY.md" target="_blank" rel="noopener">Privacy</a>
+  <a href="https://github.com/minus-phone/Minus/issues/new/choose" target="_blank" rel="noopener">Segnala un problema</a>
+  <a href="https://github.com/minus-phone/Minus/discussions" target="_blank" rel="noopener">Proponi un'idea</a>
   <span>Caratteri: Literata e Atkinson Hyperlegible, licenza SIL OFL</span>
 </footer>
 
@@ -590,13 +627,13 @@ body{background:var(--carta)}
 <div class="barra">
   <div class="pagina">
     <span><em class="m-">−minus</em><span class="sep"> · </span><span class="gr">Gratis per sempre e open source</span></span>
-    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases" aria-label="Scarica per Android"><svg class="andr" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.08c-1.77 0-3.43.38-4.92 1.06L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Scarica<span class="lungo">per Android</span></a>
+    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases" target="_blank" rel="noopener" aria-label="Scarica per Android"><svg class="andr" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.08c-1.77 0-3.43.38-4.92 1.06L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Scarica<span class="lungo">per Android</span></a>
   </div>
 </div>
 
 </div>
 <script>
-// Da telefono la bibliografia mostra i primi tre studi: «Vedi tutti» apre il resto
+// Da telefono la bibliografia mostra il primo tema: «Vedi tutti» apre il resto
 (function(){
   var b=document.querySelector('.vedi'), l=document.getElementById('elenco-fonti');
   if(!b||!l) return;
