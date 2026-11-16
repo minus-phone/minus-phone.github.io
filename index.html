@@ -316,6 +316,8 @@ footer a{color:var(--inchiostro)}
 .barra{position:sticky;bottom:0;z-index:10;background:var(--inchiostro);color:var(--carta)}
 .barra .bottone.pieno{background:var(--carta);color:var(--inchiostro);border-color:var(--carta)}
 .barra :focus-visible{outline-color:var(--carta)}
+/* Da telefono: −minus e, a capo, Gratis per sempre e open source */
+@media (max-width:640px){.barra .sep{display:none}.barra .gr{display:block}}
 .barra .pagina{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
 .barra .pagina>span{font-size:15px;color:#CFCCC4}
 .barra .bottone{gap:8px}
@@ -587,7 +589,7 @@ body{background:var(--carta)}
 
 <div class="barra">
   <div class="pagina">
-    <span><em class="m-">−minus</em> · gratis e open source</span>
+    <span><em class="m-">−minus</em><span class="sep"> · </span><span class="gr">Gratis per sempre e open source</span></span>
     <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases" aria-label="Scarica per Android"><svg class="andr" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.08c-1.77 0-3.43.38-4.92 1.06L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Scarica<span class="lungo">per Android</span></a>
   </div>
 </div>
