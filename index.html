@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>−minus · Minus, launcher minimale per Android, gratis e open source</title>
+<meta name="description" content="Minus (−minus) è un launcher minimale per Android, gratis e open source: la tua giornata al posto delle icone, meno notifiche, meno doomscrolling e meno telefono la sera. Niente account né server.">
+<link rel="canonical" href="https://minus-phone.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F3F1EB">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="−minus">
+<meta property="og:title" content="−minus · Minus, launcher minimale per Android, gratis e open source">
+<meta property="og:description" content="Minus (−minus) è un launcher minimale per Android, gratis e open source: la tua giornata al posto delle icone, meno notifiche, meno doomscrolling e meno telefono la sera. Niente account né server.">
+<meta property="og:url" content="https://minus-phone.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="fonts/literata-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "−minus",
+ "alternateName": [
+  "Minus",
+  "Minus launcher"
+ ],
+ "description": "Minus (−minus) è un launcher minimale per Android, gratis e open source: la tua giornata al posto delle icone, meno notifiche, meno doomscrolling e meno telefono la sera. Niente account né server.",
+ "url": "https://minus-phone.github.io/",
+ "inLanguage": "it",
+ "applicationCategory": "LifestyleApplication",
+ "operatingSystem": "Android 6.0 e successivi",
+ "isAccessibleForFree": true,
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "EUR"
+ },
+ "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+ "downloadUrl": "https://github.com/minus-phone/Minus/releases",
+ "sameAs": [
+  "https://github.com/minus-phone/Minus"
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "it",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "È un'app di digital detox?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sì: −minus è un launcher per Android che aiuta a ridurre l'uso dello smartphone, ma senza staccare tutto. Per disintossicarsi dallo smartphone non serve spegnerlo per una settimana: gli studi sul digital detox totale danno risultati contrastanti, mentre usarlo un po' meno, ogni giorno, funziona. −minus ti aiuta a fare questo, senza perdere le app che ti servono."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché nascondere le app?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non sono sparite: scrivi il nome e la trovi, e quelle che usi davvero restano a un tocco, in «A portata». È la griglia di icone che invita a toccare: quasi 9 volte su 10 a prendere il telefono siamo noi, non una notifica, e spesso senza un motivo preciso. Un piccolo passo in più basta a fermare il gesto automatico, e a farti arrivare dove volevi andare."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché niente immagini di sfondo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una foto sullo sfondo fa del telefono un oggetto da guardare e a cui affezionarsi: ogni sblocco diventa anche un piacere per gli occhi. −minus lo tratta come uno strumento di lavoro, come un'agenda o un taccuino: lo prendi quando ti serve, fai quello che devi e lo posi. Le foto restano dove le cerchi, nella galleria."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché in bianco e nero?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "È una scelta di stile: carta e inchiostro. Il fondo ha il colore della carta di un'agenda, il testo è nero come l'inchiostro, i titoli hanno un carattere da libro. Così il telefono somiglia a uno strumento per scrivere e consultare, non a uno schermo che chiede attenzione. Meno colore vuol dire anche meno richiamo: con lo schermo in scala di grigi le persone hanno usato il telefono da 22 a 50 minuti in meno al giorno. Il rosso resta per una sola cosa, quella che deve farsi notare: un task urgente o scaduto."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "E se voglio tornare indietro?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dalle impostazioni di Android scegli un'altra schermata principale: torni a quella di prima, con tutte le tue app."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Raccoglie i miei dati?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Legge calendario, notifiche e dati di utilizzo solo per funzionare, e tutto resta sul telefono. Puoi togliere ogni permesso dalle impostazioni di Android."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quanto è sicura?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "−minus non ha account, password né server: non esiste un archivio di dati da rubare, perché tutto resta sul tuo telefono. Il codice è pubblico, così chiunque può controllare cosa fa e segnalare un problema. Usa solo i permessi che servono agli obiettivi che scegli, e li puoi togliere quando vuoi dalle impostazioni di Android. Scaricala solo dalla pagina ufficiale su GitHub: copie prese altrove potrebbero essere state modificate."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quanto costa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Niente. È gratuita e open source, con licenza GPL-3.0."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Funziona su iPhone?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No: su iPhone non si può sostituire la schermata principale. −minus è per Android, dalla versione 6 in su, ed è provata su Android 14."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché non un dumbphone?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Perché senza WhatsApp, banca, mappe e SPID oggi si resta tagliati fuori. −minus li lascia dove sono e cambia il modo in cui ci arrivi."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Chi l'ha fatta, e come?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una product designer che, una volta diventata mamma, si è accorta di avere un problema con l'uso del telefono. La usa ogni giorno, e l'ha costruita lavorando con un'intelligenza artificiale in ogni fase. Ha ascoltato 72 persone, con un questionario e i dati veri del loro telefono. Ha studiato la ricerca sull'uso del telefono, per distinguere l'uso frequente da quello che fa male (gli studi letti). Ha provato wireframe, prototipi e una nuova versione ogni pochi giorni, sul proprio telefono. E ha lasciato il codice pubblico, così chiunque può verificare che −minus non raccoglie dati, segnalare un problema o proporre un'idea."
+   }
+  }
+ ]
+}
+</script>
+<style>
+@font-face{font-family:Literata;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/literata-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Literata;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/literata-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Literata;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/literata-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Literata;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/literata-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:Literata;font-style:italic;font-weight:500;font-display:swap;src:url(fonts/literata-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2")}
+body{margin:0}
+
+:root,.op{--carta:#F3F1EB;--inchiostro:#171716;--matita:#5C5A55;--filo:#D8D5CC;--serif:Literata,Georgia,serif;--sans:"Atkinson Hyperlegible",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+.op{margin:0;background:var(--carta);color:var(--inchiostro);font-family:var(--sans);font-size:18px;line-height:1.55}
+a{color:inherit;text-underline-offset:3px}
+a:hover{opacity:.7}
+:focus-visible{outline:2px solid var(--inchiostro);outline-offset:3px}
+.pagina{max-width:880px;margin:0 auto;padding:0 24px}
+.etichetta{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--matita);margin:0 0 18px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,5vw,44px);line-height:1.12;margin-bottom:22px}
+h3{font-size:22px;line-height:1.25;margin-bottom:6px}
+p{margin:0 0 14px}
+.sezione{padding:72px 0;border-top:1px solid var(--filo)}
+.sezione.forte{border-top:1px solid var(--inchiostro)}
+.intro{color:var(--matita);font-size:20px;max-width:620px}
+.m-{font-family:var(--serif);font-style:italic;font-weight:500;white-space:nowrap}
+
+/* Apertura: marchio compatto in una riga, accanto il prima e dopo */
+.apertura{padding:56px 0 72px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto auto auto auto auto 1fr;grid-template-areas:". confronto" "marchio confronto" "payoff confronto" "sotto confronto" "azioni confronto" "punti confronto" ". confronto";column-gap:44px}
+.marchio{grid-area:marchio;display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.marchio .etichetta{margin:6px 0 0;font-size:12px}
+/* L'h1 contiene nome ed etichetta: chi cerca capisce subito cos'è */
+.titolo{margin:0}.titolo .nome,.titolo .etichetta{display:block}.titolo .etichetta{font-family:var(--sans);font-weight:400}
+.logo{position:relative;flex:none;width:64px;height:64px;border-radius:15px;background:var(--inchiostro)}
+.logo span{position:absolute;left:25.7%;top:47.3%;width:48.6%;height:5.4%;border-radius:99px;background:var(--carta)}
+/* In loop: il ventaglio si chiude in senso orario (45° su 90°, insieme su 135°, poi tutti sull'orizzontale),
+   resta sul segno meno, poi si riapre girando ancora in senso orario. Ogni tratto lascia una scia */
+.logo .a{transform:rotate(45deg);animation:va 5s cubic-bezier(.6,0,.3,1) infinite}
+.logo .b{transform:rotate(90deg);animation:vb 5s cubic-bezier(.6,0,.3,1) infinite}
+.logo .c{transform:rotate(135deg);animation:vc 5s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes va{0%,16%{transform:rotate(45deg)}30%{transform:rotate(90deg)}44%{transform:rotate(135deg)}58%,88%{transform:rotate(180deg)}100%{transform:rotate(225deg)}}
+@keyframes vb{0%,30%{transform:rotate(90deg)}44%{transform:rotate(135deg)}58%,88%{transform:rotate(180deg)}100%{transform:rotate(270deg)}}
+@keyframes vc{0%,44%{transform:rotate(135deg)}58%,88%{transform:rotate(180deg)}100%{transform:rotate(315deg)}}
+.logo .a,.logo .b,.logo .c{opacity:.3}
+.logo .s1{opacity:calc(.3*.42);animation-delay:.035s}.logo .s2{opacity:calc(.3*.28);animation-delay:.07s}.logo .s3{opacity:calc(.3*.18);animation-delay:.105s}.logo .s4{opacity:calc(.3*.1);animation-delay:.14s}.logo .s5{opacity:calc(.3*.05);animation-delay:.175s}
+@media (prefers-reduced-motion:reduce){.logo .a,.logo .b,.logo .c{animation:none;transform:rotate(0deg)}}
+.nome{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(44px,6vw,60px);line-height:.95;letter-spacing:-.03em;margin:0}
+.payoff{grid-area:payoff;font-family:var(--serif);font-size:clamp(22px,3vw,28px);line-height:1.25;color:var(--matita);margin:0 0 14px}
+.sotto{grid-area:sotto;font-size:18px;max-width:440px;margin-bottom:26px}
+.azioni{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.apertura .azioni{grid-area:azioni}
+.bottone{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:26px;border:1.5px solid var(--inchiostro);text-decoration:none;font-weight:700;font-size:17px}
+.bottone.pieno{background:var(--inchiostro);color:var(--carta)}
+/* I quattro punti pratici sotto i bottoni */
+.punti{grid-area:punti;list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--matita);max-width:440px}
+.punti li{display:flex;align-items:center;gap:8px}
+.punti li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--inchiostro);flex:none}
+
+/* Prima e dopo */
+.confronto{grid-area:confronto;display:grid;grid-template-columns:repeat(2,200px);gap:20px;align-self:center}
+.lato{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.lato .quale{margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--matita)}
+.lato .quale .m-{text-transform:none;letter-spacing:0;font-size:14px}
+.lato figcaption{font-size:14px;line-height:1.4;color:var(--matita)}
+.ht{font-size:9px;aspect-ratio:36/76;border:1.5px solid var(--inchiostro);border-radius:3.2em;padding:1.8em 1.4em 1.4em;display:flex;flex-direction:column;overflow:hidden;line-height:1.35}
+.ht.prima{background:#26303E;color:#FFFFFF}
+.prima .ora{font-size:4.4em;letter-spacing:-.03em;line-height:1;margin-top:.2em}
+.prima .giorno{font-size:1.15em;opacity:.85;margin-top:.3em}
+.prima .griglia{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2em .4em;margin-top:2.4em}
+.prima .app{display:flex;flex-direction:column;align-items:center;gap:.45em;min-width:0}
+.prima .ic{position:relative;width:3.9em;height:3.9em;border-radius:1.3em;display:flex;align-items:center;justify-content:center}
+.prima .ic::after{content:"";width:1.5em;height:1.5em;border:.28em solid rgba(255,255,255,.92);border-radius:50%;box-sizing:border-box}
+.prima .ic.q::after{border-radius:.35em}
+.prima .ic.p::after{border:0;background:rgba(255,255,255,.92);width:1.2em;height:1.2em}
+.prima .ic.ch::after{border-color:#C23B32}
+.prima .n{font-size:.95em;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prima .bd{position:absolute;top:-.45em;right:-.55em;min-width:1.8em;height:1.8em;padding:0 .4em;border-radius:.9em;background:#D93036;color:#FFFFFF;font-size:.9em;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;border:.15em solid #26303E;font-style:normal}
+.prima .punti-p{display:flex;justify-content:center;gap:.5em;margin-top:auto;margin-bottom:1.1em}
+.prima .punti-p i{width:.55em;height:.55em;border-radius:50%;background:rgba(255,255,255,.4)}
+.prima .punti-p i:first-child{background:#FFFFFF}
+.prima .dock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));justify-items:center}
+@media (max-width:640px){.apertura{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"marchio" "payoff" "confronto" "sotto" "azioni" "punti";padding:36px 0 52px}.marchio{gap:14px;margin-bottom:16px}.logo{width:52px;height:52px;border-radius:12px}.confronto{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:6px 0 26px}.ht{font-size:7.3px}.lato figcaption{font-size:13px}}
+
+/* Le schermate di −minus: disegnate su una base di 360 px (1em = 10 px), scalano con il contenitore */
+.scr{container-type:inline-size;width:100%}
+.ph{--fg:#171716;--bg:#F3F1EB;--m:#5C5A55;--f:#D8D5CC;--s:#E7E4DB;--l:#8A877F;--r:#B3261E;font-size:calc(100cqw / 36);aspect-ratio:36/76;width:100%;border:1.5px solid var(--inchiostro);border-radius:3.2em;overflow:hidden;display:flex;flex-direction:column;padding:2.4em 2em 1.6em;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.25}
+.ph.sc{--fg:#E9E7E1;--bg:#121211;--m:#A19F98;--f:#33322F;--s:#1C1C1A;--l:#62625C;--r:#F2766B}
+.ph .f11{font-size:1.1em}.ph .f12{font-size:1.2em}.ph .f13{font-size:1.3em}.ph .f14{font-size:1.4em}.ph .f15{font-size:1.5em}.ph .f16{font-size:1.6em}.ph .f17{font-size:1.7em}.ph .f18{font-size:1.8em}.ph .f22{font-size:2.2em}.ph .f28{font-size:2.8em}.ph .f32{font-size:3.2em}
+.ph .ser{font-family:var(--serif)}.ph .w5{font-weight:500}.ph .b{font-weight:700}.ph .mu{color:var(--m)}
+.ph .up{text-transform:uppercase;letter-spacing:.06em}
+.ph .el{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.ph .grow{flex:1 1 auto}
+.ph .top{display:flex;align-items:flex-end;justify-content:space-between;min-height:5.6em}
+.ph .tl{display:flex;align-items:flex-end}
+.ph .tn{display:flex;align-items:center;gap:.8em;align-self:center}
+.ph .bdg{min-width:1.83em;height:1.83em;padding:0 .5em;border-radius:.92em;background:var(--s);display:inline-flex;align-items:center;justify-content:center}
+.ph.sc .bdg{background:#3A3935}
+.ph .rw{display:grid;grid-template-columns:6.4em minmax(0,1fr);align-items:center;min-height:4em}
+.ph .tk{display:grid;grid-template-columns:3em minmax(0,1fr);align-items:center;min-height:3.6em}
+.ph .cb{width:1.8em;height:1.8em;border:.1em solid var(--fg);border-radius:.4em}
+.ph .urg{color:var(--r);font-weight:700;margin-right:.4em}
+.ph .ln{height:.1em;background:var(--f);margin-top:1.2em}
+.ph .ln.corta{width:6.4em;margin:.6em 0 0 3em}
+.ph .dm{display:flex;justify-content:space-between;align-items:center;min-height:4.8em;padding-top:.6em}
+.ph .srch{display:flex;align-items:center;border:.1em solid var(--fg);border-radius:2.8em;padding:.6em .6em .6em 2.2em;margin-top:1.2em}
+.ph .srch span:first-child{flex:1}
+.ph .mic{width:4.4em;height:4.4em;border-radius:50%;background:var(--fg);color:var(--bg);flex:none;display:block}
+.ph .mic svg{display:block;width:100%;height:100%}
+.ph .add{align-self:center;min-height:4.4em;padding:0 1.8em;border:.1em solid var(--fg);border-radius:2.2em;display:flex;align-items:center;margin-top:.8em}
+.ph .seg{display:flex;background:var(--s);border-radius:2.4em;padding:.4em;margin:1.2em 0 .6em}
+.ph .seg span{flex:1;min-height:2.8em;border-radius:1.4em;display:flex;align-items:center;justify-content:center}
+.ph .seg .on{background:var(--fg);color:var(--bg)}
+.ph .nt{display:flex;align-items:center;gap:1em;padding:1.2em 0;border-bottom:.1em solid var(--f)}
+.ph .nt>div{flex:1;min-width:0;display:flex;flex-direction:column}
+.ph .ck{width:4.4em;height:4.4em;border-radius:50%;border:.1em solid var(--f);display:flex;align-items:center;justify-content:center;flex:none}
+.ph .crd{border:.1em solid var(--l);border-radius:1.6em;padding:1.4em 1.6em;margin-bottom:1.8em;display:flex;flex-direction:column}
+.ph .crd.pieno{background:var(--s);border-color:var(--f);margin:1.6em 0 1em;gap:.4em}
+.ph .bt2{display:flex;gap:.8em;margin-top:1.2em}
+.ph .pb{flex:1;min-height:3.2em;border:.067em solid var(--fg);border-radius:1.6em;display:flex;align-items:center;justify-content:center}
+.ph .pb.pieno{background:var(--fg);color:var(--bg)}
+.ph .inp{margin-top:.8em;border:.1em solid var(--l);border-radius:2em;padding:1em 1.4em}
+.ph .chs{display:flex;gap:.6em}
+.ph .ch{min-height:3.4em;padding:0 .92em;border:.077em solid var(--l);border-radius:1.7em;display:flex;align-items:center}
+.ph .ch.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+/* Il problema */
+.risultati{list-style:none;padding:0;margin:34px 0 0;border-top:1px solid var(--inchiostro)}
+.risultati li{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--filo)}
+.risultati .cifra{font-family:var(--serif);font-size:clamp(26px,3.6vw,32px);line-height:1.15}
+.risultati p{margin:0 0 6px}
+.risultati cite,.ob cite{font-style:normal;font-size:14px;color:var(--matita)}
+@media (max-width:640px){.risultati li{grid-template-columns:1fr;gap:8px}}
+
+/* Gli obiettivi: schermata, titolo, riga, cosa fa, lo studio */
+.ponte{font-size:clamp(26px,4vw,34px);line-height:1.2;margin:72px 0 12px}
+.obiettivi{list-style:none;padding:0;margin:52px 0 0;display:flex;flex-direction:column;gap:80px}
+.ob{display:grid;grid-template-columns:260px minmax(0,1fr);grid-template-rows:1fr auto auto 1fr;grid-template-areas:"scr ." "scr testa" "scr testo" "scr .";column-gap:56px}
+.ob:nth-child(even){grid-template-columns:minmax(0,1fr) 260px;grid-template-areas:". scr" "testa scr" "testo scr" ". scr"}
+.ob .scr{grid-area:scr;width:260px;align-self:center}
+.ob .testa{grid-area:testa;margin-bottom:16px}
+.ob .testo{grid-area:testo}
+.ob h3{font-size:clamp(30px,4vw,38px);line-height:1.1;margin-bottom:8px}
+.ob .riga{font-family:var(--serif);font-size:22px;line-height:1.3;margin:0}
+.ob .cosa{color:var(--matita);font-size:17px;margin:0 0 24px}
+/* Lo studio come callout: box un po' più scuro, testi più piccoli */
+.ob .studio{background:#E9E6DD;border-radius:14px;padding:16px 20px 18px}
+.ob .studio .etichetta{font-size:12px;margin-bottom:6px}
+.ob .studio p{margin:0 0 8px;font-size:15px;line-height:1.45}
+.ob .studio cite{display:block;font-size:13px;line-height:1.35}
+@media (max-width:640px){.ponte{margin-top:56px}.obiettivi{gap:64px;margin-top:40px}.ob,.ob:nth-child(even){grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"testa" "scr" "testo";row-gap:28px}.ob .testa{margin:0}.ob .scr{width:min(250px,100%);margin:0 auto}}
+
+/* Domande */
+details{border-top:1px solid var(--filo);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--filo)}
+summary{cursor:pointer;font-family:var(--serif);font-size:21px;list-style:none;min-height:32px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--matita)}
+details[open] summary::after{content:"−"}
+details p{margin:10px 0 0;color:var(--matita)}
+.fonti{list-style:none;padding:0;margin:0;font-size:14px;color:var(--matita);columns:2;column-gap:32px}
+.fonti li{padding:4px 0;break-inside:avoid}
+@media (max-width:640px){.fonti{columns:1}}
+/* Da mobile: i primi tre studi + Vedi tutti */
+.vedi{display:none;margin-top:18px;min-height:44px;padding:0 20px;border-radius:22px;border:1.5px solid var(--inchiostro);background:transparent;color:var(--inchiostro);font:700 15px var(--sans);cursor:pointer}
+@media (max-width:640px){.fonti:not(.aperta) li:nth-child(n+4){display:none}.vedi{display:inline-flex;align-items:center}}
+
+footer{padding:40px 0 64px;border-top:1px solid var(--inchiostro);font-size:15px;color:var(--matita);display:flex;flex-wrap:wrap;gap:12px 28px}
+footer a{color:var(--inchiostro)}
+
+/* Barra fissa: Scarica per Android sempre a portata */
+.barra{position:sticky;bottom:0;z-index:10;background:var(--carta);border-top:1px solid var(--inchiostro)}
+.barra .pagina{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.barra .pagina>span{font-size:15px;color:var(--matita)}
+.barra .bottone{gap:8px}
+@media (max-width:640px){.barra .pagina{gap:12px}.barra .pagina>span{font-size:13px;line-height:1.35}.barra .bottone{min-height:44px;padding:0 16px;font-size:15px;flex:none}.barra .lungo{display:none}}
+
+
+/* Solo sito: pagina fluida, sul telefono hero senza bottoni (c'è la barra) e sezioni più strette */
+body{background:var(--carta)}
+.op{min-height:100vh}
+@media (max-width:640px){.apertura .azioni{display:none}.solo-ampio{display:none}.sezione{padding:28px 0 24px}}
+</style>
+</head>
+<body>
+<div class="op">
+
+<main class="pagina">
+
+<header class="apertura">
+  <div class="marchio">
+  <div class="logo" role="img" aria-label="Logo di −minus: i tratti di un asterisco ruotano in senso orario, lasciando una scia, uno sull'altro fino a lasciare un solo segno meno">
+    <span></span><span class="c s5"></span><span class="c s4"></span><span class="c s3"></span><span class="c s2"></span><span class="c s1"></span><span class="c"></span><span class="b s5"></span><span class="b s4"></span><span class="b s3"></span><span class="b s2"></span><span class="b s1"></span><span class="b"></span><span class="a s5"></span><span class="a s4"></span><span class="a s3"></span><span class="a s2"></span><span class="a s1"></span><span class="a"></span>
+  </div>
+  <div>
+    <h1 class="titolo"><span class="nome">−minus</span> <span class="etichetta">Launcher minimale per Android</span></h1>
+  </div>
+  </div>
+  <p class="payoff">Il tuo smartphone. <br class="solo-ampio">Ma <em class="m-">−minus</em>.</p>
+  <p class="sotto">Cambia il modo in cui usi il telefono, senza cambiare telefono. Una home essenziale, la tua giornata al centro, le app quando servono.</p>
+  <div class="azioni">
+    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases">Scarica per Android</a>
+    <a class="bottone" href="https://github.com/minus-phone/Minus/issues/new/choose">Segnala un problema o un'idea</a>
+  </div>
+  <ul class="punti">
+    <li>Android 6 e successivi</li>
+    <li>Gratis e open source</li>
+    <li>Sicura: niente account né server</li>
+  </ul>
+  <div class="confronto">
+    <figure class="lato">
+      <p class="quale">Prima</p>
+      <div class="ht prima" role="img" aria-label="Prima: una home Android qualsiasi, con orologio, venti icone colorate e 54 notifiche in attesa sui pallini rossi">
+        <div class="ora">14:02</div>
+        <div class="giorno">lun 16 novembre · 12°</div>
+        <div class="griglia">
+          <span class="app"><span class="ic" style="background:#2F9E5B"><b class="bd">12</b></span><span class="n">WhatsApp</span></span>
+          <span class="app"><span class="ic q" style="background:#C2417A"><b class="bd">3</b></span><span class="n">Instagram</span></span>
+          <span class="app"><span class="ic p" style="background:#111114"></span><span class="n">TikTok</span></span>
+          <span class="app"><span class="ic q" style="background:#D6343A"></span><span class="n">YouTube</span></span>
+          <span class="app"><span class="ic" style="background:#3563C9"><b class="bd">9</b></span><span class="n">Facebook</span></span>
+          <span class="app"><span class="ic q ch" style="background:#ECEAE5"><b class="bd">27</b></span><span class="n">Gmail</span></span>
+          <span class="app"><span class="ic p" style="background:#E39A2F"></span><span class="n">Amazon</span></span>
+          <span class="app"><span class="ic" style="background:#5B6CF0"></span><span class="n">Notizie</span></span>
+          <span class="app"><span class="ic q" style="background:#A8262D"></span><span class="n">Netflix</span></span>
+          <span class="app"><span class="ic" style="background:#2E8FD1"></span><span class="n">Telegram</span></span>
+          <span class="app"><span class="ic p" style="background:#8A4FD8"><b class="bd">1</b></span><span class="n">Giochi</span></span>
+          <span class="app"><span class="ic" style="background:#4A9BE0"></span><span class="n">Meteo</span></span>
+          <span class="app"><span class="ic q" style="background:#C84F9A"></span><span class="n">Galleria</span></span>
+          <span class="app"><span class="ic" style="background:#5E6670"></span><span class="n">Fotocamera</span></span>
+          <span class="app"><span class="ic q" style="background:#3E7BE6"></span><span class="n">Calendario</span></span>
+          <span class="app"><span class="ic p" style="background:#6B7280"></span><span class="n">Impostazioni</span></span>
+        </div>
+        <div class="punti-p"><i></i><i></i><i></i></div>
+        <div class="dock">
+          <span class="ic" style="background:#2FA35E"></span>
+          <span class="ic q" style="background:#3D7BE0"><b class="bd">2</b></span>
+          <span class="ic" style="background:#5A55D6"></span>
+          <span class="ic p" style="background:#E07B39"></span>
+        </div>
+      </div>
+    </figure>
+    <figure class="lato">
+      <p class="quale">Con <em class="m-">−minus</em></p>
+      <div class="scr">
+      <div class="ph" role="img" aria-label="Con −minus: la home mostra la giornata di oggi, con due impegni e i task raggruppati per scadenza, domani con la sveglia, e il campo Cerca o chiedi">
+        <div class="top">
+          <div class="tl"><span class="f32 ser w5">Oggi</span><span class="f22 ser mu" style="padding:0 .36em .1em">/</span><span class="f17 ser mu" style="padding-bottom:.3em">Settimana</span></div>
+          <div class="tn"><span class="f15">Notifiche</span><span class="bdg f12">2</span></div>
+        </div>
+        <div class="f15 mu">lun 16 nov</div>
+        <div style="height:1.2em"></div>
+        <div class="rw"><span class="f15 ser">10:00</span><span class="f16 ser w5 el">Call di progetto</span></div>
+        <div class="rw"><span class="f15 ser mu">16:30</span><span class="f16 ser el">Pediatra</span></div>
+        <div class="ln"></div>
+        <div class="f12 mu up" style="padding-top:.8em">Task</div>
+        <div class="tk"><span class="cb"></span><span class="f16 el"><b class="urg">!</b>Pagare la retta del nido</span></div>
+        <div class="tk"><span class="cb"></span><span class="f16 el">Comprare il latte</span></div>
+        <div class="ln corta"></div>
+        <div class="f12 mu b" style="padding-top:.7em">entro gio</div>
+        <div class="tk"><span class="cb"></span><span class="f16 el"><b class="urg">!</b>Prenotare il tagliando</span></div>
+        <div class="f12 mu" style="padding-top:.7em">senza scadenza</div>
+        <div class="tk"><span class="cb"></span><span class="f16 el">Regalo per Sara</span></div>
+        <div class="ln"></div>
+        <div class="dm"><span class="f12 mu up">Domani · mar 17</span><span class="f15 b">Sveglia 6:50</span></div>
+        <div class="rw"><span class="f15 ser mu">08:30</span><span class="f16 ser el">Palestra</span></div>
+        <div class="grow"></div>
+        <div class="srch"><span class="f17 mu">Cerca o chiedi</span><span class="mic" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="16.3" y="9.9" width="11.4" height="15.4" rx="5.7"></rect><path d="M32 23.7a10 8 0 0 1-20 0"></path><path d="M22 30.4v4.8"></path></svg></span></div>
+      </div>
+      </div>
+    </figure>
+  </div>
+</header>
+
+<section class="sezione forte" aria-labelledby="problema">
+  <p class="etichetta">LA QUESTIONE</p>
+  <h2 id="problema">Prendiamo il telefono senza deciderlo. E ci fa stare peggio.</h2>
+  <p class="intro">La ricerca dice che basta usare meno lo smartphone perché qualcosa cambi. <em class="m-">−minus</em> è un launcher minimalista: diventa la tua home, con la giornata sempre a vista.</p>
+
+  <ul class="obiettivi">
+    <li class="ob">
+      <div class="testa"><h3>Meno notifiche</h3><p class="riga">Ti interrompe solo ciò che conta.</p></div>
+      <div class="scr">
+      <div class="ph" role="img" aria-label="Le notifiche di −minus: in Per te cinque messaggi di persone e gruppi scelti, ognuno da segnare come visto; il resto aspetta in Altro">
+        <div class="f16" style="min-height:2.75em;display:flex;align-items:center">‹&#160;&#160;Home</div>
+        <div class="f28 ser w5" style="padding-top:.15em">Notifiche</div>
+        <div class="seg"><span class="on f15 b">Per te&#160;&#160;5</span><span class="f15 b">Altro</span></div>
+        <div class="nt"><div><span class="f11 mu up">WhatsApp · 08:12</span><span class="f16 b el">Genitori del nido</span><span class="f14 mu el">Laura: domani portate il cambio, grazie!</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="nt"><div><span class="f11 mu up">Gmail · 08:51</span><span class="f16 b el">Asilo nido</span><span class="f14 mu el">Menù di novembre e chiusure</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="nt"><div><span class="f11 mu up">Telegram · 09:06</span><span class="f16 b el">Team di progetto</span><span class="f14 mu el">Giulia: ho caricato le nuove schermate</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="nt"><div><span class="f11 mu up">Messaggi · 10:05</span><span class="f16 b el">Mamma</span><span class="f14 mu el">Domenica pranzo da noi?</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="nt"><div><span class="f11 mu up">WhatsApp · 11:40</span><span class="f16 b el">Marco</span><span class="f14 mu el">Stasera cucino io</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="f12 mu" style="padding-top:1em">Il resto aspetta in «Altro»: lo guardi quando vuoi tu.</div>
+        <div class="grow"></div>
+        <div class="f15 b" style="text-align:center;min-height:3.2em;display:flex;align-items:center;justify-content:center">Segna tutto come visto</div>
+      </div>
+      </div>
+      <div class="testo">
+        <p class="cosa">Scegli le persone e i gruppi che contano: i loro messaggi arrivano subito, in «Per te». Tutto il resto aspetta in «Altro», senza suoni e senza pallini rossi.</p>
+        <div class="studio">
+          <p class="etichetta">Lo studio</p>
+          <p>Una settimana con le notifiche spente ha portato a meno disattenzione e meno irrequietezza.</p>
+          <cite>«“Silence Your Phones”: Smartphone Notifications Increase Inattention and Hyperactivity Symptoms» · Kushlev e altri, 2016</cite>
+        </div>
+      </div>
+    </li>
+    <li class="ob">
+      <div class="testa"><h3>Meno doomscrolling</h3><p class="riga">Le app che ti trattengono ti chiedono prima per cosa le apri.</p></div>
+      <div class="scr">
+      <div class="ph sc" role="img" aria-label="La pausa prima di Instagram: un task da completare, poi la domanda per cosa ti serve con lo scopo scritto, il tempo scelto e i bottoni Non ora e Apri per 10 minuti">
+        <div class="f13 mu" style="padding:.4em 0 1.1em">Stai aprendo Instagram</div>
+        <div class="crd">
+          <span class="f12 mu up">Completa un task</span>
+          <span class="f18 b" style="padding-top:.33em">Prenotare il tagliando</span>
+          <span class="f13 mu">entro gio 19</span>
+          <div class="bt2"><span class="pb pieno f15 b">Fatto</span><span class="pb f15 b">Più tardi</span></div>
+          <div style="padding-top:1em;min-height:4.4em;display:flex;align-items:center"><span class="f15 mu">Oppure:&#160;</span><span class="f15 el">Leggere il libro sul comodino</span></div>
+        </div>
+        <span class="f18 b">Se apri, per cosa ti serve?</span>
+        <div class="inp"><span class="f15">Rispondere a Giulia</span></div>
+        <span class="f17 b" style="padding:.94em 0 .35em">Per quanto?</span>
+        <div class="chs"><span class="ch f13">5 min</span><span class="ch on f13">10 min</span><span class="ch f13">15 min</span><span class="ch f13">30 min</span></div>
+        <div class="grow"></div>
+        <div class="bt2"><span class="pb f16 b">Non ora</span><span class="pb pieno f15 b">Apri · 10 min</span></div>
+      </div>
+      </div>
+      <div class="testo">
+        <p class="cosa">Prima di aprire Instagram, TikTok o YouTube, <em class="m-">−minus</em> ti propone una breve pausa: scrivi tu per cosa intendi aprire e quanto tempo intendi passarci.</p>
+        <div class="studio">
+          <p class="etichetta">Lo studio</p>
+          <p>Social limitati a 30 minuti al giorno per tre settimane hanno portato a meno solitudine e meno sintomi depressivi, rispetto a chi non cambiava niente.</p>
+          <cite>«No More FOMO: Limiting Social Media Decreases Loneliness and Depression» · Hunt e altri, 2018</cite>
+        </div>
+      </div>
+    </li>
+    <li class="ob">
+      <div class="testa"><h3>Meno interferenze sul sonno</h3><p class="riga">La sera il telefono si fa da parte, e di notte ti raggiunge solo chi conta.</p></div>
+      <div class="scr">
+      <div class="ph sc" role="img" aria-label="La home di sera: il consiglio della settimana, un task urgente, domani con la sveglia e i primi impegni, il bottone Aggiungi e il campo Cerca o chiedi">
+        <div class="top">
+          <div class="tl"><span class="f32 ser w5">Oggi</span><span class="f22 ser mu" style="padding:0 .36em .1em">/</span><span class="f17 ser mu" style="padding-bottom:.3em">Settimana</span></div>
+          <div class="tn"><span class="f15">Notifiche</span><span class="bdg f12">2</span></div>
+        </div>
+        <div class="f15 mu">lun 16 nov</div>
+        <div class="crd pieno">
+          <span class="f12 mu up">Consiglio della settimana</span>
+          <span class="f16">Stanotte metti il telefono a caricare fuori dalla camera.</span>
+          <span class="f12 mu up" style="padding-top:.9em">Urgente, da oggi</span>
+          <span class="f16 el"><b class="urg">!</b>Pagare la retta del nido</span>
+        </div>
+        <div class="dm"><span class="f12 mu up">Domani · mar 17</span><span class="f15">Sveglia 6:50</span></div>
+        <div class="rw"><span class="f14 ser mu">08:30</span><span class="f15 el">Palestra</span></div>
+        <div class="rw"><span class="f14 ser mu">11:00</span><span class="f15 el">Revisione con il team</span></div>
+        <div class="rw"><span class="f14 ser mu">18:00</span><span class="f15 el">Ritiro della spesa</span></div>
+        <div class="rw"><span><span class="cb" style="display:block"></span></span><span class="f15 el">Regalo per Sara</span></div>
+        <div class="grow"></div>
+        <div class="add"><span class="f15">+ Aggiungi</span></div>
+        <div class="srch"><span class="f17 mu">Cerca o chiedi</span><span class="mic" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="16.3" y="9.9" width="11.4" height="15.4" rx="5.7"></rect><path d="M32 23.7a10 8 0 0 1-20 0"></path><path d="M22 30.4v4.8"></path></svg></span></div>
+      </div>
+      </div>
+      <div class="testo">
+        <p class="cosa">Dieci minuti prima di andare a dormire <em class="m-">−minus</em> ti avvisa, poi la home passa alla sera: impegni di domani, la sveglia e un consiglio a settimana. Le app che trattengono si frenano fino al mattino.</p>
+        <div class="studio">
+          <p class="etichetta">Lo studio</p>
+          <p>Niente telefono nei 30 minuti prima di dormire, per quattro settimane: ci si addormentava prima e si dormiva più a lungo.</p>
+          <cite>«Effect of restricting bedtime mobile phone use on sleep, arousal, mood, and working memory» · He e altri, 2020</cite>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="sezione forte" aria-labelledby="domande">
+  <p class="etichetta">F.A.Q.</p>
+  <h2 id="domande">Domande frequenti</h2>
+  <details><summary>È un'app di digital detox?</summary><p>Sì: <em class="m-">−minus</em> è un launcher per Android che aiuta a ridurre l'uso dello smartphone, ma senza staccare tutto. Per disintossicarsi dallo smartphone non serve spegnerlo per una settimana: gli studi sul digital detox totale danno risultati contrastanti, mentre usarlo un po' meno, ogni giorno, funziona. <em class="m-">−minus</em> ti aiuta a fare questo, senza perdere le app che ti servono.</p></details>
+  <details><summary>Perché nascondere le app?</summary><p>Non sono sparite: scrivi il nome e la trovi, e quelle che usi davvero restano a un tocco, in «A portata». È la griglia di icone che invita a toccare: quasi 9 volte su 10 a prendere il telefono siamo noi, non una notifica, e spesso senza un motivo preciso. Un piccolo passo in più basta a fermare il gesto automatico, e a farti arrivare dove volevi andare.</p></details>
+  <details><summary>Perché niente immagini di sfondo?</summary><p>Una foto sullo sfondo fa del telefono un oggetto da guardare e a cui affezionarsi: ogni sblocco diventa anche un piacere per gli occhi. <em class="m-">−minus</em> lo tratta come uno strumento di lavoro, come un'agenda o un taccuino: lo prendi quando ti serve, fai quello che devi e lo posi. Le foto restano dove le cerchi, nella galleria.</p></details>
+  <details><summary>Perché in bianco e nero?</summary><p>È una scelta di stile: carta e inchiostro. Il fondo ha il colore della carta di un'agenda, il testo è nero come l'inchiostro, i titoli hanno un carattere da libro. Così il telefono somiglia a uno strumento per scrivere e consultare, non a uno schermo che chiede attenzione. Meno colore vuol dire anche meno richiamo: con lo schermo in scala di grigi le persone hanno usato il telefono da 22 a 50 minuti in meno al giorno. Il rosso resta per una sola cosa, quella che deve farsi notare: un task urgente o scaduto.</p></details>
+  <details><summary>E se voglio tornare indietro?</summary><p>Dalle impostazioni di Android scegli un'altra schermata principale: torni a quella di prima, con tutte le tue app.</p></details>
+  <details><summary>Raccoglie i miei dati?</summary><p>No. Legge calendario, notifiche e dati di utilizzo solo per funzionare, e tutto resta sul telefono. Puoi togliere ogni permesso dalle impostazioni di Android.</p></details>
+  <details><summary>Quanto è sicura?</summary><p><em class="m-">−minus</em> non ha account, password né server: non esiste un archivio di dati da rubare, perché tutto resta sul tuo telefono. Il codice è pubblico, così chiunque può controllare cosa fa e segnalare un problema. Usa solo i permessi che servono agli obiettivi che scegli, e li puoi togliere quando vuoi dalle impostazioni di Android. Scaricala solo dalla pagina ufficiale su GitHub: copie prese altrove potrebbero essere state modificate.</p></details>
+  <details><summary>Quanto costa?</summary><p>Niente. È gratuita e open source, con licenza GPL-3.0.</p></details>
+  <details><summary>Funziona su iPhone?</summary><p>No: su iPhone non si può sostituire la schermata principale. <em class="m-">−minus</em> è per Android, dalla versione 6 in su, ed è provata su Android 14.</p></details>
+  <details><summary>Perché non un dumbphone?</summary><p>Perché senza WhatsApp, banca, mappe e SPID oggi si resta tagliati fuori. <em class="m-">−minus</em> li lascia dove sono e cambia il modo in cui ci arrivi.</p></details>
+  <details><summary>Chi l'ha fatta, e come?</summary><p>Una product designer che, una volta diventata mamma, si è accorta di avere un problema con l'uso del telefono. La usa ogni giorno, e l'ha costruita lavorando con un'intelligenza artificiale in ogni fase. Ha ascoltato 72 persone, con un questionario e i dati veri del loro telefono. Ha studiato la ricerca sull'uso del telefono, per distinguere l'uso frequente da quello che fa male (<a href="#fonti">gli studi letti</a>). Ha provato wireframe, prototipi e una nuova versione ogni pochi giorni, sul proprio telefono. E ha lasciato il codice pubblico, così chiunque può verificare che <em class="m-">−minus</em> non raccoglie dati, segnalare un problema o proporre un'idea.</p></details>
+</section>
+
+<section class="sezione" aria-labelledby="fonti">
+  <p class="etichetta" id="fonti">Bibliografia · 36 studi</p>
+  <ul class="fonti" id="elenco-fonti">
+    <li><a href="https://pesquisa.bvsalud.org/portal/resource/es/mdl-38657359">Bauducco e altri, 2024 · Sleep Medicine Reviews</a></li>
+    <li><a href="https://real.mtak.hu/37678/">Billieux e altri, 2015 · Journal of Behavioral Addictions</a></li>
+    <li><a href="https://www.eurekalert.org/news-releases/950207">Brailovskaia e altri, 2022 · Journal of Experimental Psychology: Applied</a></li>
+    <li><a href="https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00070551/Brand_et_al_Interaction_I-PACE_model.pdf">Brand e altri, 2019 · Neuroscience and Biobehavioral Reviews</a></li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4313820">Chang e altri, 2015 · PNAS</a></li>
+    <li><a href="https://doaj.org/article/c41dccd760b543a881e9294f37fb26b6">Correa-Iriarte e altri, 2023 · Behavioral Sciences</a></li>
+    <li><a href="https://www.c4tbh.org/the-relationship-between-anxiety-symptom-severity-and-problematic-smartphone-use-a-review-of-the-literature-and-conceptual-frameworks/">Elhai, Levine e Hall, 2019 · Journal of Anxiety Disorders</a></li>
+    <li><a href="https://www.sciencedaily.com/releases/2019/06/190612084343.htm">Ellis e altri, 2019 · International Journal of Human-Computer Studies</a></li>
+    <li><a href="https://www.pnas.org/doi/10.1073/pnas.2213114120">Grüning e altri, 2023 · PNAS</a></li>
+    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228756">He e altri, 2020 · PLOS ONE</a></li>
+    <li><a href="https://www.lse.ac.uk/News/Latest-news-from-LSE/2020/L-December/We-engage-with-our-phones-every-five-minutes-new-study-shows">Heitmayer e Lahlou, 2021 · Computers in Human Behavior</a></li>
+    <li><a href="https://www.cqu.edu.au/news/1268397">Hill e altri, 2025 · Sleep Medicine</a></li>
+    <li><a href="https://journals.sagepub.com/doi/10.1177/20501579231212062">Holte e altri, 2023 · Mobile Media &amp; Communication</a></li>
+    <li><a href="https://mural.maynoothuniversity.ie/13113/">Hughes e Burke, 2018 · Computers in Human Behavior</a></li>
+    <li><a href="https://techcrunch.com/2018/11/09/limiting-social-media-use-reduced-loneliness-and-depression-in-new-experiment">Hunt e altri, 2018 · Journal of Social and Clinical Psychology</a></li>
+    <li><a href="https://news.uci.edu/2018/08/07/smartphones-act-as-digital-security-blankets-in-stressful-social-situations">Hunter e Pressman, 2018 · Psychosomatic Medicine</a></li>
+    <li><a href="https://appleinsider.com/articles/21/05/05/new-study-finds-that-night-shift-does-not-improve-sleep-quality-or-quantity">Jensen e altri, 2021 · Night Shift e sonno</a></li>
+    <li><a href="https://nld.tamu.edu/wp-content/uploads/sites/38/2022/10/Joshi-et-al._2022_NighttimeCPUleepQ.pdf">Joshi, Woodward e Woltering, 2022 · uso notturno del telefono e sonno</a></li>
+    <li><a href="https://core.ac.uk/download/80841493.pdf">Kardefelt-Winther e altri, 2017 · Addiction</a></li>
+    <li><a href="https://ic.kaist.ac.kr/files/papers/ko2016lock.pdf">Ko e altri, 2016 · CHI</a></li>
+    <li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2014.00611/full">Kroese e altri, 2014 · Frontiers in Psychology</a></li>
+    <li><a href="https://www.interruptions.net/literature/Kushlev-CHI16.pdf">Kushlev e altri, 2016 · CHI</a></li>
+    <li><a href="https://scholar.nycu.edu.tw/en/publications/time-distortion-associated-with-smartphone-addiction-identifying-/">Lin e altri, 2015 · Journal of Psychiatric Research</a></li>
+    <li><a href="https://faculty.washington.edu/alexisr/meaninglessPhoneUse.pdf">Lukoff e altri, 2018 · IMWUT</a></li>
+    <li><a href="https://business.columbia.edu/press-release/cbs-press-releases/smartphone-revolution-adult-pacifiers">Melumad e Pham, 2020 · Journal of Consumer Research</a></li>
+    <li><a href="https://orca.cardiff.ac.uk/id/eprint/122683/7/final.pdf">Noë e altri, 2019 · Computers in Human Behavior</a></li>
+    <li><a href="https://www.oii.ox.ac.uk/technology-use-explains-at-most-0-4-of-adolescent-wellbeing/">Orben e Przybylski, 2019 · Nature Human Behaviour</a></li>
+    <li><a href="https://www.drugsandalcohol.ie/30240/">Panova e Carbonell, 2018 · Journal of Behavioral Addictions</a></li>
+    <li><a href="https://refubium.fu-berlin.de/bitstream/fub188/38053/1/20501579211028647.pdf">Radtke e altri, 2022 · Mobile Media &amp; Communication</a></li>
+    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204811">Rod e altri, 2018 · PLOS ONE</a></li>
+    <li><a href="https://academic.oup.com/sleep/article/46/12/zsad256/7284100">Rod e altri, 2023 · Sleep</a></li>
+    <li><a href="https://irep.ntu.ac.uk/id/eprint/39236">Ryding e Kuss, 2020 · Addictive Behaviors Reports</a></li>
+    <li><a href="https://www.kcl.ac.uk/news/an-estimated-1-in-4-children-and-young-people-have-problematic-smartphone-usage">Sohn e altri, 2019 · BMC Psychiatry</a></li>
+    <li><a href="https://faculty.washington.edu/alexisr/engagementDisengagement.pdf">Tran e altri, 2019 · CHI</a></li>
+    <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyt.2021.669042/full">Wacks e Weinstein, 2021 · Frontiers in Psychiatry</a></li>
+    <li><a href="https://doaj.org/article/5665cb9f421447b792d3ed7c0377a603">Wickord e Quaiser-Pohl, 2023 · Computers in Human Behavior Reports</a></li>
+  </ul>
+  <button class="vedi" type="button" aria-controls="elenco-fonti" aria-expanded="false">Vedi tutti</button>
+</section>
+
+<footer>
+  <span><em class="m-">−minus</em> · open source, GPL-3.0</span>
+  <a href="https://github.com/minus-phone/Minus">GitHub</a>
+  <a href="https://github.com/minus-phone/Minus/blob/main/PRIVACY.md">Privacy</a>
+  <a href="https://github.com/minus-phone/Minus/issues/new/choose">Segnala un problema</a>
+  <a href="https://github.com/minus-phone/Minus/discussions">Proponi un'idea</a>
+  <span>Caratteri: Literata e Atkinson Hyperlegible, licenza SIL OFL</span>
+</footer>
+
+</main>
+
+<div class="barra">
+  <div class="pagina">
+    <span><em class="m-">−minus</em> · gratis e open source, per Android 6 e successivi</span>
+    <a class="bottone pieno" href="https://github.com/minus-phone/Minus/releases" aria-label="Scarica per Android"><svg class="andr" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.08c-1.77 0-3.43.38-4.92 1.06L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Scarica<span class="lungo">per Android</span></a>
+  </div>
+</div>
+
+</div>
+<script>
+// Da telefono la bibliografia mostra i primi tre studi: «Vedi tutti» apre il resto
+(function(){
+  var b=document.querySelector('.vedi'), l=document.getElementById('elenco-fonti');
+  if(!b||!l) return;
+  b.addEventListener('click',function(){
+    var aperta=l.classList.toggle('aperta');
+    b.setAttribute('aria-expanded',aperta?'true':'false');
+    b.textContent=aperta?'Mostra meno':'Vedi tutti';
+  });
+})();
+</script>
+</body>
+</html>
