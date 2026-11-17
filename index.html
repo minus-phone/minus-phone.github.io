@@ -157,7 +157,9 @@ html{-webkit-text-size-adjust:100%}
 .op{margin:0;background:var(--carta);color:var(--inchiostro);font-family:var(--sans);font-size:18px;line-height:1.55}
 a{color:inherit;text-underline-offset:3px}
 a:hover{opacity:.7}
-:focus-visible{outline:2px solid var(--inchiostro);outline-offset:3px}
+/* Il contorno da tastiera vale solo per link, bottoni e domande: mai per i blocchi della pagina */
+:focus-visible{outline:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--inchiostro);outline-offset:3px}
 .pagina{max-width:880px;margin:0 auto;padding:0 24px}
 .etichetta{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--matita);margin:0 0 18px}
 h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:-.01em}
@@ -191,13 +193,14 @@ p{margin:0 0 14px}
 .nome{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(44px,6vw,60px);line-height:.95;letter-spacing:-.03em;margin:0}
 .payoff{grid-area:payoff;font-family:var(--serif);font-size:clamp(22px,3vw,28px);line-height:1.25;color:var(--matita);margin:0 0 14px}
 .sotto{grid-area:sotto;font-size:18px;max-width:440px;margin-bottom:26px}
+@media (max-width:640px){.sotto{margin-bottom:0}}
 .azioni{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .apertura .azioni{grid-area:azioni}
 .bottone{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:26px;border:1.5px solid var(--inchiostro);text-decoration:none;font-weight:700;font-size:17px}
 .bottone.pieno{background:var(--inchiostro);color:var(--carta)}
 /* I quattro punti pratici sotto i bottoni */
 .punti{grid-area:punti;list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--matita);max-width:440px}
-.punti li{display:flex;align-items:center;gap:8px}
+.punti li{display:flex;align-items:center;gap:8px;font-size:16px}
 .punti li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--inchiostro);flex:none}
 
 /* Prima e dopo */
@@ -272,7 +275,8 @@ p{margin:0 0 14px}
 .risultati li{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--filo)}
 .risultati .cifra{font-family:var(--serif);font-size:clamp(26px,3.6vw,32px);line-height:1.15}
 .risultati p{margin:0 0 6px}
-.risultati cite,.ob cite{font-style:normal;font-size:14px;color:var(--matita)}
+.risultati cite{font-style:normal;font-size:14px;color:var(--matita)}
+.ob cite{font-style:normal;font-size:12px;color:var(--matita)}
 @media (max-width:640px){.risultati li{grid-template-columns:1fr;gap:8px}}
 
 /* Gli obiettivi: schermata, titolo, riga, cosa fa, lo studio */
@@ -325,7 +329,7 @@ footer a{color:var(--inchiostro)}
 /* In negativo: inchiostro su cui il testo è carta, per staccare dalla pagina */
 .barra{position:sticky;bottom:0;z-index:10;background:var(--inchiostro);color:var(--carta)}
 .barra .bottone.pieno{background:var(--carta);color:var(--inchiostro);border-color:var(--carta)}
-.barra :focus-visible{outline-color:var(--carta)}
+.barra a:focus-visible{outline-color:var(--carta)}
 /* Da telefono: −minus e, a capo, Gratis per sempre e open source */
 @media (max-width:640px){.barra .sep{display:none}.barra .gr{display:block}}
 .barra .pagina{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
@@ -427,8 +431,8 @@ body{background:#F0E7D6}
 
 <section class="sezione forte" aria-labelledby="problema">
   <p class="etichetta">LA QUESTIONE</p>
-  <h2 id="problema">Prendiamo il telefono senza deciderlo. E ci fa stare peggio.</h2>
-  <p class="intro">La ricerca dice che basta usare meno lo smartphone perché qualcosa cambi. <em class="m-">−minus</em> è un launcher minimalista: diventa la tua home, con la giornata sempre a vista.</p>
+  <h2 id="problema">Smettere di prendere il telefono senza motivo</h2>
+  <p class="intro"><em class="m-">−minus</em> è un launcher minimalista: diventa la tua home, nasconde le app e mostra la tua giornata in primo piano.</p>
 
   <ul class="obiettivi">
     <li class="ob">
@@ -438,7 +442,7 @@ body{background:#F0E7D6}
         <div class="f16" style="min-height:2.75em;display:flex;align-items:center">‹&#160;&#160;Home</div>
         <div class="f28 ser w5" style="padding-top:.15em">Notifiche</div>
         <div class="seg"><span class="on f15 b">Per te&#160;&#160;5</span><span class="f15 b">Altro</span></div>
-        <div class="nt"><div><span class="f11 mu up">WhatsApp · 08:12</span><span class="f16 b el">Genitori del nido</span><span class="f14 mu el">Laura: domani portate il cambio, grazie!</span></div><span class="ck"><span class="f18">✓</span></span></div>
+        <div class="nt"><div><span class="f11 mu up">WhatsApp · 08:12</span><span class="f16 b el">Bros</span><span class="f14 mu el">Laura: ma il cinema quando?</span></div><span class="ck"><span class="f18">✓</span></span></div>
         <div class="nt"><div><span class="f11 mu up">Gmail · 08:51</span><span class="f16 b el">Asilo nido</span><span class="f14 mu el">Menù di novembre e chiusure</span></div><span class="ck"><span class="f18">✓</span></span></div>
         <div class="nt"><div><span class="f11 mu up">Telegram · 09:06</span><span class="f16 b el">Team di progetto</span><span class="f14 mu el">Giulia: ho caricato le nuove schermate</span></div><span class="ck"><span class="f18">✓</span></span></div>
         <div class="nt"><div><span class="f11 mu up">Messaggi · 10:05</span><span class="f16 b el">Mamma</span><span class="f14 mu el">Domenica pranzo da noi?</span></div><span class="ck"><span class="f18">✓</span></span></div>
@@ -449,7 +453,7 @@ body{background:#F0E7D6}
       </div>
       </div>
       <div class="testo">
-        <p class="cosa">Scegli le persone e i gruppi che contano: i loro messaggi arrivano subito, in «Per te». Tutto il resto aspetta in «Altro», senza suoni e senza pallini rossi.</p>
+        <p class="cosa">Scegli le persone e i gruppi che contano: i loro messaggi arrivano subito. Tutto il resto aspetta in «Altro», senza suoni e senza pallini rossi.</p>
         <div class="studio">
           <p class="etichetta">Lo studio</p>
           <p>Una settimana con le notifiche spente ha portato a meno disattenzione e meno irrequietezza.</p>
@@ -458,7 +462,7 @@ body{background:#F0E7D6}
       </div>
     </li>
     <li class="ob">
-      <div class="testa"><h3>Meno doomscrolling</h3><p class="riga">Più intenzione in ciò che decidi di fare</p></div>
+      <div class="testa"><h3>Meno doomscrolling</h3><p class="riga">Più intenzione in ciò che fai</p></div>
       <div class="scr">
       <div class="ph sc" role="img" aria-label="La pausa prima di Instagram: un task da completare, poi la domanda per cosa ti serve con lo scopo scritto, il tempo scelto e i bottoni Non ora e Apri per 10 minuti">
         <div class="f13 mu" style="padding:.4em 0 1.1em">Stai aprendo Instagram</div>
@@ -478,7 +482,7 @@ body{background:#F0E7D6}
       </div>
       </div>
       <div class="testo">
-        <p class="cosa">Prima di aprire Instagram, TikTok o YouTube, <em class="m-">−minus</em> ti propone una breve pausa: scrivi tu per cosa intendi aprire e quanto tempo intendi passarci.</p>
+        <p class="cosa">Prima di aprire Instagram, TikTok o YouTube, <em class="m-">−minus</em> ti propone una breve pausa: scrivi tu per cosa intendi aprire e quanto tempo intendi restarci.</p>
         <div class="studio">
           <p class="etichetta">Lo studio</p>
           <p>Social limitati a 30 minuti al giorno per tre settimane hanno portato a meno solitudine e meno sintomi depressivi, rispetto a chi non cambiava niente.</p>
@@ -498,8 +502,6 @@ body{background:#F0E7D6}
         <div class="crd pieno">
           <span class="f12 mu up">Consiglio della settimana</span>
           <span class="f16">Stanotte metti il telefono a caricare fuori dalla camera.</span>
-          <span class="f12 mu up" style="padding-top:.9em">Urgente, da oggi</span>
-          <span class="f16 el"><b class="urg">!</b>Pagare la retta del nido</span>
         </div>
         <div class="dm"><span class="f12 mu up">Domani · mar 17</span><span class="f15">Sveglia 6:50</span></div>
         <div class="rw"><span class="f14 ser mu">08:30</span><span class="f15 el">Palestra</span></div>
@@ -512,7 +514,7 @@ body{background:#F0E7D6}
       </div>
       </div>
       <div class="testo">
-        <p class="cosa">Dieci minuti prima di andare a dormire <em class="m-">−minus</em> ti avvisa, poi la home passa alla sera: impegni di domani, la sveglia e un consiglio a settimana. Le app che trattengono si frenano fino al mattino.</p>
+        <p class="cosa">La sera <em class="m-">−minus</em> ti passa in modalità Notte: impegni di domani, la sveglia e un consiglio a settimana. Le app che trattengono si frenano fino al mattino.</p>
         <div class="studio">
           <p class="etichetta">Lo studio</p>
           <p>Niente telefono nei 30 minuti prima di dormire, per quattro settimane: ci si addormentava prima e si dormiva più a lungo.</p>
